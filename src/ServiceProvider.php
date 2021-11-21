@@ -20,7 +20,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         $this->app->singleton(Client::class, function () {
-            return new Client(config('services.meituan_pub_union.app_key'), config('services.meituan_pub_union.utm_source'));
+            return new Client(config('services.meituan.pub_union.app_key'), config('services.meituan.pub_union.utm_source'));
         });
         $this->app->alias(Client::class, 'MeituanPubUnion');
     }
