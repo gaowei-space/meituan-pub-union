@@ -1,0 +1,19 @@
+{
+    "name": "gaowei-space\/meituan-pub-union",
+    "description": "美团分销联盟api接口封装",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "高伟",
+            "email": "huyao995@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "GaoweiSpace\\MeituanPubUnion\\": "src"
+        }
+    }
+}
