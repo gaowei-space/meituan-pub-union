@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the gaowei-space/weather.
+ * This file is part of the gaowei-space/meituan-pub-union.
  *
  * (c) gaowei <huyao9950@hotmail.com>
  *
