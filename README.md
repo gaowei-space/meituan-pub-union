@@ -11,7 +11,7 @@ $ composer require gaowei-space/meituan-pub-union -vvv
 
 ## 配置
 
-在使用本扩展之前，你需要去 [美团分销联盟开放平台](https://pub.meituan.com) 注册账号，然后创建应用，获取应用的 app_key 和 utm_source。
+在使用本扩展之前，你需要去 [美团分销联盟](https://pub.meituan.com) 注册账号，签约入驻后创建应用，获取应用的 app_key 和 utm_source。
 
 ## 使用
 ### 获取某个省份的城市列表
@@ -19,16 +19,17 @@ $ composer require gaowei-space/meituan-pub-union -vvv
 use GaoweiSpace\MeituanPubUnion\Api\Common\Request\CitiesRequest;
 use GaoweiSpace\MeituanPubUnion\Http\Client;
 
+$app_key    = 'xxxxxxxxxx';
+$utm_source = 'xxxxxxxxxx';
+
 // 实例化获取城市的请求类
 $request = new CitiesRequest();
 // 设置省份ID
 $request->setProvinceId(1);
 
-$app_key    = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
-$utm_source = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
-
 // 实例客户端类
-$client   = new Client($app_key, $utm_source);
+$client = new Client($app_key, $utm_source);
+
 // 发送请求调用接口
 $response = $client->syncInvoke($request);
 ```
