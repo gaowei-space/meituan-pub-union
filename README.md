@@ -65,6 +65,7 @@ MEITUAN_PUB_UNION_UTM_SOURCE=xxxxxxxxxxxxxxxxxxxxx
 ### 可以用两种方式来获取 GaoweiSpace\MeituanPubUnion\Http\Client 实例：
 #### 方法参数注入
 ```php
+use GaoweiSpace\MeituanPubUnion\Http\Client;
 
 public function getCities(Client $client)
 {
