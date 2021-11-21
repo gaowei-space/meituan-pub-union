@@ -15,5 +15,12 @@
         "psr-4": {
             "GaoweiSpace\\MeituanPubUnion\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GaoweiSpace\\MeituanPubUnion\\ServiceProvider"
+            ]
+        }
     }
 }
