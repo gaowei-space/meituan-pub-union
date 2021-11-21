@@ -4,6 +4,9 @@ namespace GaoweiSpace\MeituanPubUnion\Api\Common\Request;
 
 use GaoweiSpace\MeituanPubUnion\Http\Request;
 
+/**
+ * 获取某个省份的所有城市
+ */
 class CitiesRequest extends Request
 {
     public function __construct()

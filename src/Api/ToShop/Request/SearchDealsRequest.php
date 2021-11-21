@@ -5,7 +5,7 @@ namespace GaoweiSpace\MeituanPubUnion\Api\ToShop\Request;
 use GaoweiSpace\MeituanPubUnion\Http\Request;
 
 /**
- * 商品API-团购搜索接口
+ * 到店-商品搜索
  */
 class SearchDealsRequest extends Request
 {

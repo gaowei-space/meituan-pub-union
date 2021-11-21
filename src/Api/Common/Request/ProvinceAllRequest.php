@@ -4,6 +4,9 @@ namespace GaoweiSpace\MeituanPubUnion\Api\Common\Request;
 
 use GaoweiSpace\MeituanPubUnion\Http\Request;
 
+/**
+ * 获取全国省份
+ */
 class ProvinceAllRequest extends Request
 {
     public function __construct()
