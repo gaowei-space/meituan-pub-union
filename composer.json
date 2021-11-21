@@ -1,6 +1,6 @@
 {
     "name": "gaowei-space\/meituan-pub-union",
-    "description": "美团分销联盟api接口封装",
+    "description": "美团分销联盟 PHP-SDK",
     "license": "MIT",
     "authors": [
         {
