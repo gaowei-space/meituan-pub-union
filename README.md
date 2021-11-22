@@ -2,6 +2,7 @@
 
 <p align="center"> 🌈 美团分销联盟 PHP-SDK. </p>
 
+![StyleCI build status](https://github.styleci.io/repos/430381661/shield)
 
 ## 安装
 
