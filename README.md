@@ -19,14 +19,18 @@ $ composer require gaowei-space/meituan-pub-union -vvv
 
 在使用本扩展之前，你需要去 [美团分销联盟](https://pub.meituan.com) 注册账号，签约入驻后创建应用，获取应用的 app_key 和 utm_source。
 
-## API支持
-- ✅ 获取全国省份
-- ✅ 获取某省份的城市
-- ✅ 获取某个城市的一级类目包含的二级类目信息
-- ✅ 获取某个城市的商圈信息（点评）
-- ✅ 获取某个城市的商圈信息（美团）
-- 🆕 其他暂未支持，接下来会支持获取分销订单等
-
+## 支持
+- ✅ 获取全国省份 `ProvinceAllRequest`
+- ✅ 获取某省份的城市 `CitiesRequest`
+- ✅ 获取某个城市的一级类目包含的二级类目信息 `CategoriesRequest`
+- ✅ 获取某个城市的商圈信息（点评）`RegionsByDianPingRequest`
+- ✅ 获取某个城市的商圈信息（美团）`RegionsByMeiTuanRequest`
+- ✅ 到店商品搜索 `SearchDealsRequest`
+- ✅ 分销取链 `LinksRequest`
+- ✅ 异常订单数据 `OrdersAbnormalRequest`
+- ✅ CPA订单数据 `OrdersCPARequest`
+- ✅ CPS订单数据 `OrdersCPSRequest`
+- 🆕 其他暂未支持，接下来会支持完善到店模块接口
 
 ## 使用
 ### 获取某个省份的城市列表
@@ -48,8 +52,24 @@ $client = new Client($app_key, $utm_source);
 // 发送请求调用接口
 $response = $client->syncInvoke($request);
 ```
+### 请求参数
 
-## 在 Laravel 中使用
+> 请求参数的设置，请结合 [美团分销联盟API文档](https://pub.meituan.com/#/api-doc)，确认要使用的参数，调用对应请求类的对应方法进行设置
+
+Request 类中对于各个参数都已经内置了 set前缀的设置方法，比如：
+```php
+public function setUtmSource(string $utmSource): void
+{
+    $this->utmSource = $utmSource;
+}
+```
+
+调用设置参数
+```php
+$request->setUtmSource('***');
+```
+
+### 在 Laravel 中使用
 
 在 Laravel 中使用也是同样的安装方式，配置写在 config/services.php 中：
 ```php

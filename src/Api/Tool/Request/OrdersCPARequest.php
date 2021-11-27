@@ -18,9 +18,8 @@ use GaoweiSpace\MeituanPubUnion\Http\Request;
  */
 class OrdersCPARequest extends Request
 {
-    protected $utmSource = '';
-    protected $page      = 1;    // 是
-    protected $size      = 100;  // 是
+    protected $page = 1;    // 是
+    protected $size = 100;  // 是
 
     protected $startVerifyDate   = null;  // 否
     protected $endVerifyDate     = null;  // 否
@@ -43,7 +42,6 @@ class OrdersCPARequest extends Request
     protected function setUserParams(&$params): void
     {
         // 必传参数
-        $this->setUserParam($params, "utmSource", $this->utmSource);
         $this->setUserParam($params, "page", $this->page);
         $this->setUserParam($params, "size", $this->size);
 
@@ -81,11 +79,6 @@ class OrdersCPARequest extends Request
     public function getMethod(): string
     {
         return "get";
-    }
-
-    public function setUtmSource(string $utmSource): void
-    {
-        $this->utmSource = $utmSource;
     }
 
     public function setPage(string $page)
