@@ -54,9 +54,9 @@ $response = $client->syncInvoke($request);
 ```
 ### 请求参数
 
-> 请求参数的设置，请结合 [美团分销联盟API文档](https://pub.meituan.com/#/api-doc)，确认要使用的参数，调用对应请求类的对应方法进行设置
+> 请求参数的设置，请结合 [美团分销联盟API文档](https://pub.meituan.com/#/api-doc)，确认要使用的参数，调用对应请求API类的对应方法进行设置
 
-Request 类中对于各个参数都已经内置了 set前缀的设置方法，比如：
+每个请求API类中对于各个参数都已经内置了 `set` 前缀的设置方法，如：
 ```php
 public function setUtmSource(string $utmSource): void
 {
@@ -64,19 +64,19 @@ public function setUtmSource(string $utmSource): void
 }
 ```
 
-调用设置参数
+调用对应方法，进行参数设置：
 ```php
 $request->setUtmSource('***');
 ```
 
 ### 在 Laravel 中使用
 
-在 Laravel 中使用也是同样的安装方式，配置写在 config/services.php 中：
+在 Laravel 中使用也是同样的安装方式，配置写在 `config/services.php` 中：
 ```php
 
 'meituan' => [
     'pub_union' => [
-        'app_key' => env('MEITUAN_PUB_UNION_APP_KEY'),
+        'app_key'    => env('MEITUAN_PUB_UNION_APP_KEY'),
         'utm_source' => env('MEITUAN_PUB_UNION_UTM_SOURCE'),
     ]
 ]
@@ -88,7 +88,7 @@ MEITUAN_PUB_UNION_APP_KEY=xxxxxxxxxxxxxxxxxxxxx
 MEITUAN_PUB_UNION_UTM_SOURCE=xxxxxxxxxxxxxxxxxxxxx
 ```
 
-### 可以用两种方式来获取 GaoweiSpace\MeituanPubUnion\Http\Client 实例：
+### 可以用两种方式来获取 `GaoweiSpace\MeituanPubUnion\Http\Client` 实例：
 #### 方法参数注入
 ```php
 use GaoweiSpace\MeituanPubUnion\Http\Client;
