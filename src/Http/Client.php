@@ -107,7 +107,7 @@ class Client
      * @param array $clientOptions
      * @return void
      */
-    public function setClientOptions(array $clientOptions)
+    public function setClientOptions(array $clientOptions): void
     {
         $this->clientOptions = $clientOptions;
     }
@@ -117,7 +117,7 @@ class Client
      *
      * @return HttpResponse 接口返回信息
      */
-    public function syncInvoke(Request $request)
+    public function syncInvoke(Request $request): HttpResponse
     {
         $this->_setRequestCommonQuery($request);
 
@@ -204,9 +204,9 @@ class Client
     /**
      * 获取 GuzzleHttp client
      *
-     * @return GuzzleHttp\Client
+     * @return \GuzzleHttp\Client
      */
-    private function _getHttpClient()
+    private function _getHttpClient(): \GuzzleHttp\Client
     {
         return new GuzzleHttpClient($this->_getClientOptions());
     }
@@ -237,7 +237,7 @@ class Client
         $self_response = new HttpResponse();
         $self_response->setStatusCode($response->getStatusCode());
         $self_response->setHeaders($response->getHeaders());
-        $self_response->setBody($response->getBody());
+        $self_response->setBody((string) $response->getBody());
         return $self_response;
     }
 
@@ -246,9 +246,9 @@ class Client
      *
      * @param Request $request
      *
-     * @return Response
+     * @return HttpResponse
      */
-    private function _handle(Request $request)
+    private function _handle(Request $request): HttpResponse
     {
         try {
             $response = $this->_getHttpClient()->request($request->getMethod(), $request->getApiAction(), $this->requestOptions);

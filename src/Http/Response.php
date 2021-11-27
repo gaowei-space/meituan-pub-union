@@ -23,7 +23,7 @@ class Response
     protected $statusCode;
 
     /**
-     * @var Header
+     * @var array
      */
     protected $headers;
 
@@ -40,7 +40,7 @@ class Response
     /**
      * @return int
      */
-    public function getStatusCode()
+    public function getStatusCode(): int
     {
         return $this->statusCode;
     }
@@ -48,23 +48,23 @@ class Response
     /**
      * @param int $statusCode
      */
-    public function setStatusCode($statusCode)
+    public function setStatusCode(int $statusCode): void
     {
         $this->statusCode = $statusCode;
     }
 
     /**
-     * @return Header
+     * @return array
      */
-    public function getHeaders()
+    public function getHeaders(): array
     {
         return $this->headers;
     }
 
     /**
-     * @param Header $headers
+     * @param array $headers
      */
-    public function setHeaders($headers)
+    public function setHeaders(array $headers): void
     {
         $this->headers = $headers;
     }
@@ -72,7 +72,7 @@ class Response
     /**
      * @return string
      */
-    public function getBody()
+    public function getBody(): string
     {
         return $this->body;
     }
@@ -80,7 +80,7 @@ class Response
     /**
      * @param string $body
      */
-    public function setBody($body)
+    public function setBody(string $body): void
     {
         $this->body = $body;
     }
@@ -88,7 +88,7 @@ class Response
     /**
      * @return array|null
      */
-    public function getContent()
+    public function getContent(): ?array
     {
         if ($this->content === null) {
             $this->content = json_decode($this->getBody(), true);
@@ -99,7 +99,7 @@ class Response
     /**
      * @param array|null $content
      */
-    public function setContent($content)
+    public function setContent($content): void
     {
         $this->content = $content;
     }
