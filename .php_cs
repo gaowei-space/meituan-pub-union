@@ -2,7 +2,7 @@
 $header = <<<EOF
 This file is part of the gaowei-space/meituan-pub-union.
 
-(c) 高伟 <huyao995@hotmail.com>
+(c) 高伟 <huyao9950@hotmail.com>
 
 This source file is subject to the MIT license that is bundled.
 EOF;
