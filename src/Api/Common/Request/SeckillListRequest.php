@@ -38,7 +38,7 @@ class SeckillListRequest extends Request
 
     public function getApiAction(): string
     {
-        return sprintf("api/mt/city/%s/regions", $this->cityId);
+        return 'api/seckill/list';
     }
 
     public function getMethod(): string

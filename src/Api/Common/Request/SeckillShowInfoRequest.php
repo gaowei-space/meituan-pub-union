@@ -25,7 +25,7 @@ class SeckillShowInfoRequest extends Request
 
     public function getApiAction(): string
     {
-        return sprintf("api/mt/city/%s/regions", $this->cityId);
+        return 'api/seckill/showInfo';
     }
 
     public function getMethod(): string
