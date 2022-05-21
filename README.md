@@ -30,6 +30,8 @@ $ composer require gaowei-space/meituan-pub-union -vvv
 - ✅ 异常订单数据 `OrdersAbnormalRequest`
 - ✅ CPA订单数据 `OrdersCPARequest`
 - ✅ CPS订单数据 `OrdersCPSRequest`
+- ✅ 秒杀场次 `SeckillShowInfoRequest`
+- ✅ 秒杀团单列表 `SeckillListRequest`
 - 🆕 其他暂未支持，接下来会支持完善到店模块接口
 
 ## 使用
