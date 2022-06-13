@@ -25,7 +25,7 @@ $ composer require gaowei-space/meituan-pub-union -vvv
 - ✅ 获取某个城市的一级类目包含的二级类目信息 `CategoriesRequest`
 - ✅ 获取某个城市的商圈信息（点评）`RegionsByDianPingRequest`
 - ✅ 获取某个城市的商圈信息（美团）`RegionsByMeiTuanRequest`
-- ✅ 到店商品搜索 `SearchDealsRequest`
+- ✅ 到店商品搜索 `SearchDealsRequest` (美团已停止该接口请求权限，[了解](https://github.com/gaowei-space/meituan-pub-union/issues/4))
 - ✅ 分销取链 `LinksRequest`
 - ✅ 异常订单数据 `OrdersAbnormalRequest`
 - ✅ CPA订单数据 `OrdersCPARequest`
