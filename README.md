@@ -3,10 +3,11 @@
 <p align="center"> 🌈 美团分销联盟 PHP-SDK. </p>
 
 
-![GitHub branch checks state](https://img.shields.io/github/checks-status/gaowei-space/meituan-pub-union/main)
-[![Latest Release](https://img.shields.io/github/v/release/gaowei-space/meituan-pub-union)](https://github.com/gaowei-space/meituan-pub-union/releases)
-![StyleCI build status](https://github.styleci.io/repos/430381661/shield)
 [![PHP Version](https://img.shields.io/packagist/php-v/gaowei-space/meituan-pub-union)](https://www.php.net/)
+[![GitHub branch checks state](https://img.shields.io/github/checks-status/gaowei-space/meituan-pub-union/main)](https://github.com/gaowei-space/meituan-pub-union/tree/main)
+[![Packagist Version](https://img.shields.io/packagist/v/gaowei-space/meituan-pub-union)](https://packagist.org/packages/gaowei-space/meituan-pub-union)
+![StyleCI build status](https://github.styleci.io/repos/430381661/shield)
+[![Latest Release](https://img.shields.io/github/v/release/gaowei-space/meituan-pub-union)](https://github.com/gaowei-space/meituan-pub-union/releases)
 [![License](https://img.shields.io/github/license/gaowei-space/meituan-pub-union)](https://github.com/gaowei-space/meituan-pub-union/LICENSE)
 
 ## 安装
